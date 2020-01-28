@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>World of Countries</title>
+    <link rel="stylesheet" href="./css/basic-settings.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>World of countries</title>
+</head>
+
+<body>
+    <!-- UI -->
+    <div class="wrap">
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner">
+                    <h1 class="banner__title">World of Countries</h1>
+                    <div class="search-result">
+                        <h2> Numbers of countries exist in the world: </h2>
+                        <h2 class="result" id="number-of-countries"></h2>
+                    </div>
+                    <div class="form ">
+                        <div class="form__item">
+                            <input type="text" id="input_country_name" placeholder="Serch country name">
+                        </div>
+                        <div class="form__item">
+                            <div class="button " id="starting-word">Starting word</div>
+                        </div>
+                        <div class=" form__item">
+                            <div class="button button--secoundary" id="search-with-word">Search with any word</div>
+                        </div>
+                        <div class=" form__item">
+                            <div class="button button--secoundary" id="btn_sort">Sort</div>
+                        </div>
+                    </div>
+                    <div class="search-result">
+                        <h2> Search result: </h2>
+                        <h2 class="result" id="search-in-numbers"></h2>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="contry-section">
+            <div class="container">
+                <div class="country-container" id="country-container">
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer">
+                <div class="footer__img">
+                    <a href="index.html"> <img src="./img/logo.svg" alt="uxatik"></a>
+                </div>
+                <div class="footer__para">
+                    <p>Copyright 2020 by Atik</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/countries.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
