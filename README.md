@@ -1,9 +1,9 @@
 # world-of-countries
 
-##Demo
+## Demo
 https://atikrhaman.github.io/world-of-countries/.
 
-##Technoloy used
+## Technoloy used
 Pure javaScript, DOM, SCSS, HTML
 
 ## Author
