@@ -61,6 +61,12 @@
   padding-left: 20px;
 }
 
+.arrow-icon {
+  -webkit-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
 .contry-section {
   padding: 0 0 60px 0;
   background: #F6F9FC;
@@ -207,6 +213,9 @@
   background: red;
   background: #1B2430;
   color: #ffffff;
+}
+.button svg {
+  width: 30px;
 }
 
 .button:hover {

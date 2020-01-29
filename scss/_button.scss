@@ -23,6 +23,10 @@
         background: $color-brand;
         color: $color-white;
     }
+
+    svg {
+        width: 30px;
+    }
 }
 
 .button:hover {

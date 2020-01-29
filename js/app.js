@@ -6,6 +6,8 @@ const btnSort = document.querySelector("#btn_sort");
 const inputCountryName = document.querySelector("#input_country_name");
 const startingWord = document.querySelector("#starting-word");
 const searchWithWord = document.querySelector("#search-with-word");
+const arrowIcon = document.querySelector("#arrow-icon");
+const svg = document.querySelector("svg");
 let countriesArry = [...countries]
 let startWithAnyWord;
 let serchWord;
@@ -27,7 +29,6 @@ const getCountryName = countriesArry => {
     }
 };
 getCountryName(countriesArry);
-// ==== Search result in numbers ======
 
 // ===== Defult input event lisner =====
 inputCountryName.addEventListener("input", function (evt) {
@@ -35,21 +36,20 @@ inputCountryName.addEventListener("input", function (evt) {
     let inputName = this.value;
 
     startWithAnyWord = countriesArry.filter(country =>
-        country.startsWith(inputName)
+        country.toLowerCase().startsWith(inputName.toLowerCase())
     );
     getCountryName(startWithAnyWord);
 
+    // Search result in numbers
     const searchResultInNum = () => {
         searchInNumbers.innerHTML = "";
         let searchResultInNum = ` ${startWithAnyWord.length}`
-        console.log(searchResultInNum)
         searchInNumbers.append(searchResultInNum)
     }
-    console.log(searchResultInNum())
-
+    searchResultInNum()
 });
 
-// ========== StartWithWord ==========
+// ========== Starting Word ==========
 startingWord.addEventListener('click', function () {
     searchWithWord.style.background = '#ffffff'
     searchWithWord.style.color = '#1B2430'
@@ -64,13 +64,13 @@ startingWord.addEventListener('click', function () {
         countryContainer.innerHTML = "";
         let inputName = this.value;
         const startWithAnyWord = countriesArry.filter(country =>
-            country.startsWith(inputName)
+            country.toLowerCase().startsWith(inputName.toLowerCase())
         );
         getCountryName(startWithAnyWord);
     });
 })
 
-// ======== SearchWithWord ==========
+// ======== Search with any word ==========
 searchWithWord.addEventListener('click', function () {
     startingWord.style.background = '#ffffff'
     startingWord.style.color = '#1B2430'
@@ -89,8 +89,26 @@ searchWithWord.addEventListener('click', function () {
             country.includes(inputName)
         );
         getCountryName(serchWord);
+
+        // Search result in numbers
+        const searchResultInNum = () => {
+            searchInNumbers.innerHTML = "";
+            let searchResultInNum = ` ${serchWord.length}`
+            searchInNumbers.append(searchResultInNum)
+        }
+        searchResultInNum()
     });
 })
+
+const rotateArrow = () => {
+    if (svg.style.transform == 'rotate(0deg)') {
+        svg.style.transform = 'rotate(180deg)'
+        svg.style.fill = '#ffffff'
+    } else {
+        svg.style.transform = 'rotate(0deg)'
+        svg.style.fill = '#ffffff'
+    }
+}
 
 // =========== Reverse =============
 btnSort.addEventListener("click", function () {
@@ -105,6 +123,7 @@ btnSort.addEventListener("click", function () {
 
     countryContainer.innerHTML = "";
     getCountryName(countriesArry.reverse());
+    rotateArrow()
 });
 
 // Filter, includes, match, flag
