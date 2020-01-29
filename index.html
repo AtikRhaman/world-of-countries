@@ -20,14 +20,15 @@
             <div class="container">
                 <div class="banner">
                     <h1 class="banner__title">World of Countries</h1>
-                    <div class="search-result">
+                    <div class="total-cointry">
                         <h2> Numbers of countries exist in the world: </h2>
                         <h2 class="result" id="number-of-countries"></h2>
                     </div>
+                    <div class="search-result">
+                        <h2> Search result: </h2>
+                        <h2 class="result" id="search-in-numbers"></h2>
+                    </div>
                     <div class="form ">
-                        <div class="form__item">
-                            <input type="text" id="input_country_name" placeholder="Serch country name">
-                        </div>
                         <div class="form__item">
                             <div class="button " id="starting-word">Starting word</div>
                         </div>
@@ -43,11 +44,11 @@
                                     </svg></i> Sort</div>
                         </div>
                     </div>
-                    <div class="search-result">
-                        <h2> Search result: </h2>
-                        <h2 class="result" id="search-in-numbers"></h2>
+                    <div class="search">
+                        <div class="search__item">
+                            <input type="text" id="input_country_name" placeholder="Serch country name">
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -58,9 +59,7 @@
                 </div>
             </div>
         </section>
-
     </div>
-
     <footer class="footer-section">
         <div class="container">
             <div class="footer">
