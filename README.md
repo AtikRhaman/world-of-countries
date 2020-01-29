@@ -1,4 +1,4 @@
-# world-of-countries
+# World-of-countries
 
 ## Demo
 https://atikrhaman.github.io/world-of-countries/.
